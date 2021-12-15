@@ -1,0 +1,221 @@
+<html>
+<head>
+<title>Main.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Main.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com.company</span><span class="s0">;</span>
+
+<span class="s0">import </span><span class="s1">java.time.LocalDate</span><span class="s0">;</span>
+<span class="s0">import </span><span class="s1">java.util.Scanner</span><span class="s0">;</span>
+
+<span class="s0">import static </span><span class="s1">jdk.internal.agent.Agent.error</span><span class="s0">;</span>
+
+<span class="s0">public class </span><span class="s1">Main {</span>
+    <span class="s0">public static void </span><span class="s1">main(String[] args) </span><span class="s0">throws </span><span class="s1">InterruptedException {</span>
+        <span class="s0">int </span><span class="s1">yaerr</span><span class="s0">;</span>
+        <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;The date today is &quot; </span><span class="s1">+ LocalDate.now().getMonth().toString() + </span><span class="s2">&quot; &quot; </span><span class="s1">+ LocalDate.now().getDayOfMonth() + </span><span class="s2">&quot; &quot; </span><span class="s1">+ LocalDate.now().getYear())</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;What is your name&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">String name = scanner.next()</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Month&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">date = scanner.nextInt()</span><span class="s0">;</span>
+        <span class="s0">int </span><span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(date &lt; </span><span class="s3">0 </span><span class="s1">|| date &gt; </span><span class="s3">12</span><span class="s1">) {</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;error&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">switch </span><span class="s1">(date) {</span>
+            <span class="s0">case </span><span class="s3">1</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-31)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">31</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">2</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">3</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">29</span><span class="s1">) {</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-29)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">4</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">5</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-31)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">31</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">6</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">7</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">8</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">9</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">10</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">11</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+            <span class="s0">case </span><span class="s3">12</span><span class="s1">:</span>
+                <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the day (1-30)&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">day = scanner.nextInt()</span><span class="s0">;</span>
+                <span class="s0">if </span><span class="s1">(day &lt; </span><span class="s3">0 </span><span class="s1">|| day &gt; </span><span class="s3">30</span><span class="s1">) {</span>
+                    <span class="s1">error(</span><span class="s2">&quot;invalid date please rerun the program and enter a valid date &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                <span class="s1">} </span><span class="s0">else </span><span class="s1">{</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Good ! &quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s0">int </span><span class="s1">yaer = </span><span class="s3">0</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;Please enter the year that you were born at&quot;</span><span class="s1">)</span><span class="s0">;</span>
+                    <span class="s1">yaer = scanner.nextInt()</span><span class="s0">;</span>
+                    <span class="s1">System.out.println(</span><span class="s2">&quot;the date is&quot; </span><span class="s1">+ day + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ date + </span><span class="s2">&quot;/&quot; </span><span class="s1">+ yaer)</span><span class="s0">;</span>
+                    <span class="s0">break;</span>
+                <span class="s1">}</span>
+        <span class="s1">}</span>
+        <span class="s1">learning()</span><span class="s0">;</span>
+    <span class="s1">}</span>
+
+    <span class="s0">public static void </span><span class="s1">learning() {</span>
+        <span class="s1">Scanner scanner = </span><span class="s0">new </span><span class="s1">Scanner(System.in)</span><span class="s0">;</span>
+        <span class="s1">String helpful</span><span class="s0">;</span>
+        <span class="s1">String why</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Ok lets start learning&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;What is Matlab? </span><span class="s0">\n</span><span class="s2">Matlab is an platform that gives you the option to make some almost impossible mathematics calculation that us as a student can't do.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Why do we need it? </span><span class="s0">\n</span><span class="s2">There are some very complex calculation (specially in the different subjects of engineering),we need to use Matlab because it can help to Mathematicians do some near to impossible </span><span class="s0">\n</span><span class="s2">calculations in Math and find the solution in seconds&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;What is this platform? </span><span class="s0">\n</span><span class="s2">This platform is a non-formalistic and non-financials (According to the Privacy Policy) platform to learn that language.</span><span class="s0">\n</span><span class="s2">This platform is mostly recommended for students who didn't managed to pass the Matlab exam</span><span class="s0">\n</span><span class="s2">or been having a difficult time learning coding in Matlab.&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;</span><span class="s0">\n</span><span class="s2">&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">System.out.println(</span><span class="s2">&quot;Was it helpful?&lt;y/n&gt;&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">helpful = scanner.next()</span><span class="s0">;</span>
+        <span class="s0">if </span><span class="s1">(helpful.contains(</span><span class="s2">&quot;y&quot;</span><span class="s1">)){</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;Great!</span><span class="s0">\n</span><span class="s2">do you have any questions? if you have send thees to the mail - Thesun538@gmail.com&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+        <span class="s0">else if </span><span class="s1">(helpful.contains(</span><span class="s2">&quot;n&quot;</span><span class="s1">)){</span>
+            <span class="s1">System.out.println(</span><span class="s2">&quot;We will like to hear why!</span><span class="s0">\n</span><span class="s2">Your opinion is important to us!</span><span class="s0">\n</span><span class="s2">pls send to to the email - Thesun538@gmail.com&quot;</span><span class="s1">)</span><span class="s0">;</span>
+        <span class="s1">}</span>
+    <span class="s1">}</span>
+<span class="s1">}</span></pre>
+</body>
+</html>
